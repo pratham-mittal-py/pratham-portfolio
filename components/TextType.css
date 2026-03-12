@@ -1,0 +1,43 @@
+.text-type {
+  display: inline-block;
+  position: relative;
+}
+
+.text-type__content {
+  display: inline-block;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  font-weight: normal;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+.text-type__cursor--hidden {
+  opacity: 0 !important;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+  .text-type {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-type {
+    font-size: 0.8em;
+  }
+}
